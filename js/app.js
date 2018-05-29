@@ -26,29 +26,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function hiddenDescription() {
         var boxes = document.getElementsByClassName('box');
-        console.log(boxes);
-
-        var description = document.getElementsByClassName('description');
-
-        boxes[0].addEventListener('mouseover', function () {
-            description[0].classList.add('hidden');
-        });
-
-        boxes[1].addEventListener('mouseover', function () {
-            description[1].classList.add('hidden');
-        });
 
         for (var i = 0; i < boxes.length; i++) {
-           boxes[i].addEventListener('mouseout', function () {
-               description[0].classList.remove('hidden');
-               description[1].classList.remove('hidden');
-           })
+            boxes[i].addEventListener('mouseover', function () {
+                this.firstElementChild.classList.add('hidden');
+            })
+
+            boxes[i].addEventListener('mouseout', function () {
+                this.firstElementChild.classList.remove('hidden');
+            })
+
         }
     }
 
     hiddenDescription();
 
-
+    
 
 
 });
