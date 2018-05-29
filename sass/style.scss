@@ -1,0 +1,583 @@
+@font-face {
+  font-family: 'ralewaybold';
+  src: url('../fonts/raleway-bold-webfont.woff2') format('woff2'),
+  url('../fonts/raleway-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ralewayregular';
+  src: url('../fonts/raleway-regular-webfont.woff2') format('woff2'),
+  url('../fonts/raleway-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ralewaylight';
+  src: url('../fonts/raleway-light-webfont.woff2') format('woff2'),
+  url('../fonts/raleway-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*Layout*/
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: ralewayregular, sans-serif;
+  width: 100%;
+
+}
+
+header, section, footer {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  /*box-sizing: border-box;*/
+  /*border: 1px solid red;*/
+}
+
+header {
+  height: 25px;
+  //width: 1200px;
+  padding-top: 15px;
+  background-color: black;
+  color: white;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.background-main {
+  /*background-color:; !* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,cbcacf+100 *!*/
+  background: rgb(255,255,255); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(203,202,207,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(203,202,207,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(203,202,207,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cbcacf',GradientType=0 ); /* IE6-9 */;
+}
+
+.background-pricelist {
+  background: rgb(241, 241, 241);
+
+}
+
+.main {
+  height: 505px;
+}
+
+.boxes {
+  height: 350px;
+}
+
+.pricelist {
+  height: 725px;
+}
+
+.contact {
+  height: 540px;
+}
+
+footer {
+  height: 100px;
+}
+
+/* Header */
+
+.logo {
+  float: left;
+  margin-left: 70px;
+  font-family: ralewaybold, sans-serif;
+}
+
+.logo span {
+  color: #24ba9f;
+}
+
+nav {
+  float: right;
+  font-weight: bold;
+  margin-right: 70px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0;
+  display: inline-block;
+  cursor: pointer;
+  padding-left: 35px;
+  font-family: ralewaybold, sans-serif;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 938px;
+  top: 50px;
+  border: 1px solid black;
+  background-color: black;
+  height: 85px;
+  width: 105px;
+  padding-left: 15px;
+  padding-top: 10px;
+  z-index: 1;
+}
+
+.dropdown-content:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 45px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  bottom: 95px;
+  border-color: transparent transparent black;
+  border-width: 11px;
+}
+
+.dropdown-content a {
+  text-decoration: none;
+  list-style-type: none;
+  color: white;
+  line-height: 20px;
+  margin-top: 5px;
+  cursor: pointer;
+  font-family: ralewaylight, sans-serif;
+  font-size: 12px;
+  display: block;
+}
+
+.show {display:block;}
+
+.hidden {
+  display: none;
+}
+
+
+/*Top of page, section main*/
+
+.main > div {
+  float: left;
+}
+
+.main .nav {
+  font-size: 70px;
+  line-height: 505px;
+  padding: 0 40px 0 70px;
+  color: #24ba9f;
+}
+
+.main .nav_2 {
+  font-size: 70px;
+  line-height: 505px;
+  padding: 0 0 0 95px;
+  color: #24ba9f;
+}
+
+.main .img {
+  width: 400px;
+  height: 505px;
+  background-image: url("../images/black_chair.png");
+  background-size: 149%;
+  background-position: 60% 87%;
+  background-repeat: no-repeat;
+}
+
+.main .product_description {
+  width: 435px;
+  /*border: 1px dashed black;*/
+  margin: 105px 0 0 5px;
+  text-align: center;
+}
+
+.product_description h1 {
+  font-size: 35px;
+  letter-spacing: 3px;
+  font-family: ralewayregular,sans-serif;
+}
+
+.product_description h1 span {
+  color: #24ba9f;
+  font-family: ralewaybold,sans-serif;
+}
+
+.btn {
+  font-family: ralewaylight, sans-serif;
+  background-color: #24ba9f;
+  border-radius: 10px;
+  font-size: 20px;
+  color: white;
+  padding: 15px 0 12px 25px;
+  width: 263px;
+  margin-top: 25px;
+  letter-spacing: 3px;
+}
+
+/*Second section, section boxes*/
+
+.boxes > div:first-child {
+  width: 330px;
+  height: 225px;
+  background-image: url("../images/box1_img.jpg");
+  margin: 23px 33px;
+  float: left;
+}
+
+.boxes > div:nth-child(2) {
+  width: 330px;
+  height: 225px;
+  background-image: url("../images/box2_img.jpg");
+  margin: 23px 33px;
+  float: left;
+}
+
+.boxes > div:last-child{
+  width: 330px;
+  height: 225px;
+  margin: 23px 33px;
+  float: left;
+}
+
+.boxes >div:first-child{
+  margin: 20px 0 0 65px;
+}
+
+.boxes div + div {
+  margin-left: 20px;
+}
+
+.boxes .description {
+  position: absolute;
+  margin-top: 140px;
+  background: rgba(255, 255, 255, .5);
+  width: 290px;
+  padding: 20px;
+  font-family: ralewayregular ,sans-serif;
+}
+
+.boxes .description::after {
+  content: '';
+  width: 125px;
+  border: 3px solid #24ba9f;
+  display: block;
+}
+
+.all_inputs {
+  border: 1px solid grey;
+  padding: 27px 20px 25px 20px;
+  margin: 0 30px 0 -40px;
+}
+
+.all_inputs > span {
+  font-size: 16px;
+}
+
+.all_inputs > p {
+  font-size: 14px;
+  line-height: 20px;
+  color: grey;
+}
+
+.all_inputs p + p {
+  margin-top: 25px;
+}
+
+.all_inputs > span::after {
+  content: '';
+  width: 125px;
+  border: 3px solid #24ba9f;
+  display: block;
+}
+
+
+
+/*Third section, section pricelist*/
+
+
+
+.pricelist {
+  height: 725px;
+}
+
+.pricelist h2, .contact h2 {
+  position: relative;
+  left: 65px;
+  top: 15px;
+}
+
+.pricelist h2::after {
+  content: '';
+  width: 320px;
+  border: 4px solid #24ba9f;
+  display: block;
+  margin-top: 5px;
+}
+
+.plan {
+  width: 325px;  /* 320 px realna szerokosc*/
+  height: 500px;
+  border: 2px solid silver;
+  /* @TODO color silver jest za ciemny */
+  background: rgb(249, 249, 249);
+  font-family: ralewayregular, sans-serif;
+  position: relative;
+  top: 70px;
+  left: 65px;
+  float: left;
+}
+
+.pricelist .plan + .plan {
+  margin-left: 35px;
+}
+
+.plan .circle_decoration {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  border: 2px solid silver;
+  /* @TODO color silver jest za ciemny */
+  position: absolute;
+  left: 10px;
+  top: -10px;
+  margin: -30px 125px;
+  background: white;
+}
+
+.plan .circle_decoration div {
+  width: 24px;
+  height: 24px;
+  background: silver;
+  /* @TODO color silver jest za ciemny */
+  border-radius: 12px;
+  position: absolute;
+  top: 13px;
+  left: 13px;
+}
+
+.plan h3 {
+  font-size: 24px;
+  color: #24ba9f;
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+  position: relative;
+  bottom: 15px;
+}
+
+.plan .price {
+  margin: 20px auto;
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  border: 2px solid silver;
+  color: silver;
+  text-align: center;
+  font-family: ralewaybold, sans-serif;
+  position: relative;
+  bottom: 25px;
+  background-color: white;
+}
+
+.price .price_value {
+  margin-top: 30px;
+  font-size: 36px;
+  font-weight: bold;
+}
+.price .price_value sup{
+  font-size: 13px;
+}
+.price .price_unit{
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.details {
+  text-align: center;
+}
+
+
+.details .main_details {
+  font-size: 22px;
+  padding: 6px;
+  background: #e9e9e9;
+  color: #999999;
+}
+
+.details .additional_details {
+  font-size: 22px;
+  padding: 10px;
+  background: rgb(242,242,242);
+  color: #999999;
+}
+
+.plan button {
+  position: absolute;
+  bottom: 20px;
+  left: 105px;
+  width: 120px;
+  border-radius: 10px;
+  background-color: #24ba9f;
+  color: white;
+  padding: 6px;
+  border: none;
+  font-size: 18px;
+  font-family: ralewayregular , sans-serif;
+}
+
+div.plan:nth-of-type(2) {
+  border: 1px solid #24ba9f;
+  background-color: #24ba9f;
+}
+
+.details .middle_details {
+  background-color: white;
+}
+
+button.middle_details {
+  background-color: white;
+  color: #24ba9f;
+}
+
+#middle_h3 {
+  color: white;
+}
+
+.last_details.additional_details {
+  background-color: #e9e9e9;
+}
+
+.contact h2::after {
+  content: '';
+  width: 320px;
+  border: 4px solid #24ba9f;
+  display: block;
+  margin-top: 5px;
+}
+
+.contact form {
+  float: left;
+}
+
+.contact form label input, textarea {
+  font-family: ralewaylight, sans-serif;
+  display: block;
+  font-size: 30px;
+  border: 1px solid #27c7ab;
+  position: relative;
+  left: 75px;
+  top: 15px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 15px 10px 15px 10px;
+  width: 610px;
+}
+
+.contact .red_chair {
+  float: right;
+}
+
+.contact form label input::placeholder {
+  color: #e9e9e9;
+}
+
+textarea::placeholder {
+  color: #e9e9e9;
+}
+
+textarea[placeholder="Wiadomość"] {
+  height: 165px;
+  resize: none;
+}
+
+.red_chair {
+  position: relative;
+  right: 150px;
+}
+
+.checkbox {
+  font-family: ralewaylight, sans-serif;
+  box-sizing: border-box;
+  float: right;
+  display: block;
+  width: 435px;
+  font-size: 20px;
+  margin-top: 30px;
+  padding-right: 30px;
+  color: #999999;
+}
+
+.checkbox img {
+  float: left;
+  border: 1px solid #27c7ab;
+  height: 45px;
+  width: 45px;
+  margin-right: 10px;
+}
+
+.send button {
+  float: right;
+  position: relative;
+  top: 15px;
+  right: 95px;
+  width: 340px;
+  margin-top: 20px;
+  height: 70px;
+  border-radius: 10px;
+  font-size: 35px;
+  color: white;
+  background-color: #27c7ab;
+}
+
+footer .copy {
+  float:left;
+  padding-top: 35px;
+  padding-left: 65px;
+  letter-spacing: 1px;
+  color: #999999;
+}
+
+footer .logo_footer {
+  float: right;
+  padding-top: 30px;
+  margin-right: 75px;
+  color: #999999;
+
+}
+
+footer .images_footer {
+  float: right;
+  padding-top: 20px;
+  margin-right: 67px;
+}
+
+.logo_footer {
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+.logo_footer strong {
+  font-family: ralewaybold, sans-serif;
+}
+
+
+
+
