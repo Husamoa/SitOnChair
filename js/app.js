@@ -98,12 +98,23 @@ document.addEventListener("DOMContentLoaded", function () {
         var listPanel = document.querySelectorAll('.list_panel li');
         var value = listPanel.value;
         for (var i = 0; i < listPanel.length; i++) {
+
+
             listPanel[i].addEventListener('click', function () {
                 this.parentElement.previousElementSibling.previousElementSibling.innerText = this.innerText;
                 this.parentElement.previousElementSibling.previousElementSibling.style.color = 'black';
                 this.parentElement.classList.toggle('show');
 
             })
+
+            listPanel[i].addEventListener('mousemove', function f() {
+                this.style.backgroundColor = 'lightblue';
+            });
+
+            listPanel[i].addEventListener('mouseleave', function f() {
+                this.style.backgroundColor = '';
+
+            });
         }
     }
 
