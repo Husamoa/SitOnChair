@@ -28,8 +28,6 @@ body {
   margin: 0 auto;
   padding: 0;
   font-family: ralewayregular, sans-serif;
-  width: 100%;
-
 }
 
 header, section, footer {
@@ -57,12 +55,14 @@ header {
 }
 
 .background-main {
+  width: 100vw;
   /*background-color:; !* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,cbcacf+100 *!*/
-  background: rgb(255,255,255); /* Old browsers */
-  background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(203,202,207,1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(203,202,207,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(203,202,207,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cbcacf',GradientType=0 ); /* IE6-9 */;
+  background: rgb(255, 255, 255); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(203, 202, 207, 1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(203, 202, 207, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(203, 202, 207, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#cbcacf', GradientType=0); /* IE6-9 */
+;
 }
 
 .background-pricelist {
@@ -166,13 +166,6 @@ nav ul li {
   display: block;
 }
 
-.show {display:block;}
-
-.hidden {
-  display: none;
-}
-
-
 /*Top of page, section main*/
 
 .main > div {
@@ -193,14 +186,42 @@ nav ul li {
   color: #24ba9f;
 }
 
-.main .img {
+@mixin backgroundImg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+
+}
+
+.slider {
   width: 400px;
   height: 505px;
-  background-image: url("../images/black_chair.png");
-  background-size: 149%;
-  background-position: 60% 87%;
-  background-repeat: no-repeat;
+  @for $i from 1 through  4 {
+    div#img#{$i} {
+      height: 100%;
+      background-image: url("../images/chair-#{$i}.png");
+      @include backgroundImg;
+    }
+  }
+  div {
+    display: none;
+  }
 }
+
+.slider {
+    div.visible {
+      display: block;
+    }
+  }
+
+#prevPicture {
+  cursor: pointer;
+}
+
+#nextPicture {
+  cursor: pointer;
+}
+
 
 .main .product_description {
   width: 435px;
@@ -212,12 +233,12 @@ nav ul li {
 .product_description h1 {
   font-size: 35px;
   letter-spacing: 3px;
-  font-family: ralewayregular,sans-serif;
+  font-family: ralewayregular, sans-serif;
 }
 
 .product_description h1 span {
   color: #24ba9f;
-  font-family: ralewaybold,sans-serif;
+  font-family: ralewaybold, sans-serif;
 }
 
 .btn {
@@ -250,14 +271,14 @@ nav ul li {
   float: left;
 }
 
-.boxes > div:last-child{
+.boxes > div:last-child {
   width: 330px;
   height: 225px;
   margin: 23px 33px;
   float: left;
 }
 
-.boxes >div:first-child{
+.boxes > div:first-child {
   margin: 20px 0 0 65px;
 }
 
@@ -271,7 +292,7 @@ nav ul li {
   background: rgba(255, 255, 255, .5);
   width: 290px;
   padding: 20px;
-  font-family: ralewayregular ,sans-serif;
+  font-family: ralewayregular, sans-serif;
 }
 
 .boxes .description::after {
@@ -308,11 +329,7 @@ nav ul li {
   display: block;
 }
 
-
-
 /*Third section, section pricelist*/
-
-
 
 .pricelist {
   height: 725px;
@@ -333,7 +350,7 @@ nav ul li {
 }
 
 .plan {
-  width: 325px;  /* 320 px realna szerokosc*/
+  width: 325px; /* 320 px realna szerokosc*/
   height: 500px;
   border: 2px solid silver;
   /* @TODO color silver jest za ciemny */
@@ -402,10 +419,12 @@ nav ul li {
   font-size: 36px;
   font-weight: bold;
 }
-.price .price_value sup{
+
+.price .price_value sup {
   font-size: 13px;
 }
-.price .price_unit{
+
+.price .price_unit {
   font-size: 14px;
   font-weight: bold;
 }
@@ -413,7 +432,6 @@ nav ul li {
 .details {
   text-align: center;
 }
-
 
 .details .main_details {
   font-size: 22px;
@@ -425,7 +443,7 @@ nav ul li {
 .details .additional_details {
   font-size: 22px;
   padding: 10px;
-  background: rgb(242,242,242);
+  background: rgb(242, 242, 242);
   color: #999999;
 }
 
@@ -440,7 +458,7 @@ nav ul li {
   padding: 6px;
   border: none;
   font-size: 18px;
-  font-family: ralewayregular , sans-serif;
+  font-family: ralewayregular, sans-serif;
 }
 
 div.plan:nth-of-type(2) {
@@ -548,7 +566,7 @@ textarea[placeholder="Wiadomość"] {
 }
 
 footer .copy {
-  float:left;
+  float: left;
   padding-top: 35px;
   padding-left: 65px;
   letter-spacing: 1px;
@@ -576,6 +594,14 @@ footer .images_footer {
 
 .logo_footer strong {
   font-family: ralewaybold, sans-serif;
+}
+
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
 }
 
 

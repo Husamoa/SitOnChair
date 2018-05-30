@@ -41,7 +41,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
     hiddenDescription();
 
-    
+    function slider() {
+        var prevPicture = document.getElementById('prevPicture');
+        var nextPicture = document.getElementById('nextPicture');
+
+        var listImg = document.querySelectorAll('.slider div');
+        console.log(listImg);
+
+        var count = 0;
+
+        listImg[count].classList.add('visible');
+
+        nextPicture.addEventListener('click', function () {
+            console.log('nextPicture');
+            listImg[count].classList.remove('visible');
+            if(count >= listImg.length - 1) {
+                count = 0;
+            } else {
+                count++;
+            }
+            listImg[count].classList.add('visible');
+
+        });
+
+        prevPicture.addEventListener('click', function () {
+            console.log('prevPicture');
+            listImg[count].classList.remove('visible');
+            if (count === 0) {
+                count = listImg.length - 1;
+            } else {
+                count--;
+
+            }
+            listImg[count].classList.add('visible');
+        })
+
+    }
+
+    slider();
+
 
 
 });
