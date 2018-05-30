@@ -81,5 +81,32 @@ document.addEventListener("DOMContentLoaded", function () {
     slider();
 
 
+    function dropDown() {
+        var listArrow = document.getElementsByClassName('list_arrow');
+
+        for (var i = 0; i < listArrow.length; i++) {
+            listArrow[i].addEventListener('click', function () {
+                this.nextElementSibling.classList.toggle('show');
+            })
+        }
+
+    }
+
+    dropDown();
+
+    function choose() {
+        var listPanel = document.querySelectorAll('.list_panel li');
+        var value = listPanel.value;
+        for (var i = 0; i < listPanel.length; i++) {
+            listPanel[i].addEventListener('click', function () {
+                this.parentElement.previousElementSibling.previousElementSibling.innerText = this.innerText;
+                this.parentElement.previousElementSibling.previousElementSibling.style.color = 'black';
+                this.parentElement.classList.toggle('show');
+
+            })
+        }
+    }
+
+    choose();
 
 });
