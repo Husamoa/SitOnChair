@@ -162,15 +162,15 @@ document.addEventListener("DOMContentLoaded", function () {
                     value[2].innerText = '';
                 }
 
-                
+
                 this.parentElement.classList.toggle('show');
             });
 
-            listPanel[i].addEventListener('mousemove', function f() {
+            listPanel[i].addEventListener('mousemove', function () {
                 this.style.backgroundColor = 'lightblue';
             });
 
-            listPanel[i].addEventListener('mouseleave', function f() {
+            listPanel[i].addEventListener('mouseleave', function () {
                 this.style.backgroundColor = '';
             });
         }
