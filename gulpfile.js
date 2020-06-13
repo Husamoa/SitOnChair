@@ -1,34 +1,29 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
-var plumber = require ('gulp-plumber');
-var imagemin = require('gulp-imagemin');
-const autoprefixer = require('gulp-autoprefixer');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const sourcemaps = require('gulp-sourcemaps');
+const babel = require('gulp-babel');
 
 
 gulp.task('sass', function() {
-    return gulp.src('sass/style.scss')
-        .pipe(plumber())
+    return gulp.src('src/scss/main.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({
             errLogToConsole: true,
             outputStyle: 'expanded'
         }))
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('css'))
+        .pipe(gulp.dest('dist/css'))
 });
+
+gulp.task('js', () =>
+    gulp.src('src/js/app.js')
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(gulp.dest('dist/js'))
+);
 
 gulp.task('watch', function(){
-    gulp.start('sass');
-    gulp.watch('sass/**/*.scss', ['sass']);
-});
-
-gulp.task('imagemin', function () {
-    gulp.src('images/*')
-        .pipe(imagemin())
-        .pipe(gulp.dest('dist/images'))
+    gulp.watch('src/scss/**/*.scss', ['sass']);
+    gulp.watch('src/js/**/*.js', ['js']);
 });

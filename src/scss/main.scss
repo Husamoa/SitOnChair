@@ -1,23 +1,23 @@
 @font-face {
   font-family: 'ralewaybold';
-  src: url('../fonts/raleway-bold-webfont.woff2') format('woff2'),
-  url('../fonts/raleway-bold-webfont.woff') format('woff');
+  src: url('../../src/fonts/raleway-bold-webfont.woff2') format('woff2'),
+  url('../../src/fonts/raleway-bold-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'ralewayregular';
-  src: url('../fonts/raleway-regular-webfont.woff2') format('woff2'),
-  url('../fonts/raleway-regular-webfont.woff') format('woff');
+  src: url('../../src/fonts/raleway-regular-webfont.woff2') format('woff2'),
+  url('../../src/fonts/raleway-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'ralewaylight';
-  src: url('../fonts/raleway-light-webfont.woff2') format('woff2'),
-  url('../fonts/raleway-light-webfont.woff') format('woff');
+  src: url('../../src/fonts/raleway-light-webfont.woff2') format('woff2'),
+  url('../../src/fonts/raleway-light-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -205,7 +205,7 @@ nav ul li {
   @for $i from 1 through  4 {
     div#img#{$i} {
       height: 100%;
-      background-image: url("../images/chair-#{$i}.png");
+      background-image: url("../../src/images/chair-#{$i}.png");
       @include backgroundImg;
     }
   }
@@ -264,7 +264,7 @@ nav ul li {
 .boxes > div:first-child {
   width: 330px;
   height: 225px;
-  background-image: url("../images/box1_img.jpg");
+  background-image: url("../../src/images/box1_img.jpg");
   margin: 23px 33px;
   float: left;
 }
@@ -272,7 +272,7 @@ nav ul li {
 .boxes > div:nth-child(2) {
   width: 330px;
   height: 225px;
-  background-image: url("../images/box2_img.jpg");
+  background-image: url("../../src/images/box2_img.jpg");
   margin: 23px 33px;
   float: left;
 }
@@ -846,6 +846,3 @@ footer .images_footer {
 .hidden {
   display: none;
 }
-
-
-
