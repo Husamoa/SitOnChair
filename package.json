@@ -1,7 +1,7 @@
 {
-  "name": "SitOnChair",
+  "name": "sitonchair",
   "version": "1.0.0",
-  "description": "",
+  "description": "> Example site for Coders Lab workshop",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,7 +19,7 @@
     "android >= 4",
     "bb >= 10"
   ],
-  "author": "",
+  "author": "Pawel Bialek & Mateusz Cendlak",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.3.3",
@@ -32,5 +32,13 @@
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
     "natives": "^1.1.6"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Husamoa/SitOnChair.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Husamoa/SitOnChair/issues"
+  },
+  "homepage": "https://github.com/Husamoa/SitOnChair#readme"
 }
