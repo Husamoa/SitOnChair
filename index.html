@@ -1,283 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Sit on chair</title>
-    <link rel="icon" type="image/png" href="src/images/black_chair.png">
 
-    <link rel="stylesheet" href="dist/css/main.css">
-    <link rel="stylesheet" href="src/fonts/stylesheet.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="UTF-8">
+  <title>Sit on chair</title>
+  <link rel="icon" type="image/png" href="src/images/black_chair.png">
+
+  <link rel="stylesheet" href="dist/css/main.css">
+  <link rel="stylesheet" href="src/fonts/stylesheet.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
+
 <body>
-<header class="header">
-    <div class="container">
-        <div class="logo">SIT <span>ON</span> CHAIR</div>
-        <nav>
-            <ul>
-                <li id="dropbtn">
-                    O FIRMIE
-                </li>
-                <li>GALERIA
-
-                </li>
-                <li>KONTAKT
-
-                </li>
-            </ul>
+  <header class="header cointaner--fluid">
+      <div class="logo"><a href="#"> SIT <span>ON</span> CHAIR</div></a>
+        <nav class="topnav">
+          <div id="nav-links" class="nav-links">
+            <a href="#" id="dropbtn">
+              O FIRMIE
+            </a>
+            <a href="#">GALERIA</a>
+            <a href="#">KONTAKT</a>
+          </div>
+          <button id="hamburger" class="hamburger" aria-label="Menu">
+            <span class="hamburger__container" tabindex="-1">
+            <span class="hamburger__bars"></span>
+          </span>
+          </button>
         </nav>
-        <div id="myDropdown" class="dropdown-content">
-            <a href="">Aktualności</a>
-            <a href="">Nasz Team</a>
-            <a href="">Historia</a>
-        </div>
-    </div>
-</header>
-<div class="background-main">
-    <div class="container">
-        <section class="main">
-            <div class="nav" id="prevPicture">&lt;</div>
-            <div class="slider">
-                <div id="img1"></div>
-                <div id="img2"></div>
-                <div id="img3"></div>
-                <div id="img4"></div>
-            </div>
-            <div class="product_description">
-                <h1>
-                    SIT <span>ON</span> OUR <span>CHAIR</span>
-                </h1>
-                <p>
-                    Lorem ipsum in faucibus quis, feugiat velit. In congue id, ornare id, eleifend at, posuere vitae,
-                    quam.
-                    Integer est. Aliquam vitae fringilla sit amet augue ut enim. Donec lectus nec massa. Maecenas nunc.
-                </p>
-                <button class="btn">ZOBACZ WIĘCEJ</button>
-            </div>
-            <div class="nav_2" id="nextPicture">&gt;</div>
 
-        </section>
-    </div>
-</div>
-<div class="container">
-    <section class="boxes">
+      <div id="myDropdown" class="dropdown-content">
+        <a href="">Aktualności</a>
+        <a href="">Nasz Team</a>
+        <a href="">Historia</a>
+      </div>
+  </header>
+
+  <main>
+      <div class="container--fluid">
+        <div class="main-section">
+          <div class="nav" id="prevPicture">&lt;</div>
+          <div class="slider">
+            <div id="img1"></div>
+            <div id="img2"></div>
+            <div id="img3"></div>
+            <div id="img4"></div>
+          </div>
+          <div class="product_description">
+            <h1>
+              SIT <span>ON</span> OUR <span>CHAIR</span>
+            </h1>
+            <p>
+              Lorem ipsum in faucibus quis, feugiat velit. In congue id, ornare id, eleifend at, posuere vitae,
+              quam.
+              Integer est. Aliquam vitae fringilla sit amet augue ut enim. Donec lectus nec massa. Maecenas nunc.
+            </p>
+            <button class="btn">ZOBACZ WIĘCEJ</button>
+          </div>
+          <div class="nav" id="nextPicture">&gt;</div>
+        </div>
+      </div>
+  </main>
+
+  <section class="boxes container">
+    <div class=" container__row">
+      <div class="container__col-4">
         <div class="box">
-            <div class="description">
-                Chair CLAIR
-            </div>
+          <div class="description">
+            Chair CLAIR
+          </div>
         </div>
+      </div>
+      <div class="container__col-4">
         <div class="box">
-            <div class="description">
-                Chair MARGARITA
-            </div>
+          <div class="description">
+            Chair MARGARITA
+          </div>
         </div>
-        <div>
-            <div class="all_inputs">
-                <span>Finds all inputs</span>
-                <p>
-                    Finds all inputs that are not checked and highlights the next sibling span. Notice there is no
-                    change
-                    when clicking the checkboxes since no click events have been linked.
-                </p>
-                <p>
-                    Notice is no change when clicking the checkboxes since no cklick events have been
-                </p>
+      </div>
 
-            </div>
+      <div class="container__col-4">
+        <div class="all_inputs">
+          <span>Finds all inputs</span>
+          <p>
+            Finds all inputs that are not checked and highlights the next sibling span. Notice there is no
+            change
+            when clicking the checkboxes since no click events have been linked.
+          </p>
+          <p>
+            Notice is no change when clicking the checkboxes since no cklick events have been
+          </p>
+
         </div>
-    </section>
-</div>
-<div class="background-pricelist">
-    <div class="container">
-        <section class="pricelist">
-
-            <h2>CENNIK </h2>
-
-
-            <div class="plan">
-                <div class="circle_decoration">
-                    <div></div>
-                </div>
-                <h3>BASIC PLAN</h3>
-                <div class="price">
-                    <div class="price_value">85<sup>99</sup></div>
-                    <div class="price_unit">PLN/MSC</div>
-                </div>
-
-                <div class="details">
-                    <div class="main_details">Zakup towaru + dowóz</div>
-                    <div class="additional_details">Serwis</div>
-                </div>
-
-
-                <button>DOŁĄCZ</button>
-            </div>
-            <div class="plan">
-                <div class="circle_decoration">
-                    <div></div>
-                </div>
-                <h3 id="middle_h3">STANDARD PLAN</h3>
-                <div class="price">
-                    <div class="price_value">95<sup>99</sup></div>
-                    <div class="price_unit">PLN/MSC</div>
-                </div>
-
-                <div class="details">
-                    <div class="middle_details main_details">Zakup towaru + dowóz</div>
-                    <div class="additional_details">Serwis</div>
-                    <div class="middle_details additional_details">Gwarancja 5 lat</div>
-                </div>
-
-
-                <button class="middle_details">DOŁĄCZ</button>
-            </div>
-            <div class="plan">
-                <div class="circle_decoration">
-                    <div></div>
-                </div>
-                <h3>ADVANCE PLAN</h3>
-                <div class="price">
-                    <div class="price_value">211<sup>00</sup></div>
-                    <div class="price_unit">PLN/MSC</div>
-                </div>
-
-                <div class="details">
-                    <div class="main_details">Zakup towaru + dowóz</div>
-                    <div class="additional_details">Serwis</div>
-                    <div class="last_details additional_details">Gwarancja 6 lat</div>
-                    <div class="additional_details">Porady projektanta</div>
-                </div>
-
-
-                <button>DOŁĄCZ</button>
-            </div>
-
-
-        </section>
+      </div>
     </div>
-</div>
-<div class="container">
+  </section>
+  <div class="background-pricelist">
+    <div class="container">
+      <section class="pricelist">
+
+        <h2>CENNIK </h2>
+
+
+        <div class="plan">
+          <div class="circle_decoration">
+            <div></div>
+          </div>
+          <h3>BASIC PLAN</h3>
+          <div class="price">
+            <div class="price_value">85<sup>99</sup></div>
+            <div class="price_unit">PLN/MSC</div>
+          </div>
+
+          <div class="details">
+            <div class="main_details">Zakup towaru + dowóz</div>
+            <div class="additional_details">Serwis</div>
+          </div>
+
+
+          <button>DOŁĄCZ</button>
+        </div>
+        <div class="plan">
+          <div class="circle_decoration">
+            <div></div>
+          </div>
+          <h3 id="middle_h3">STANDARD PLAN</h3>
+          <div class="price">
+            <div class="price_value">95<sup>99</sup></div>
+            <div class="price_unit">PLN/MSC</div>
+          </div>
+
+          <div class="details">
+            <div class="middle_details main_details">Zakup towaru + dowóz</div>
+            <div class="additional_details">Serwis</div>
+            <div class="middle_details additional_details">Gwarancja 5 lat</div>
+          </div>
+
+
+          <button class="middle_details">DOŁĄCZ</button>
+        </div>
+        <div class="plan">
+          <div class="circle_decoration">
+            <div></div>
+          </div>
+          <h3>ADVANCE PLAN</h3>
+          <div class="price">
+            <div class="price_value">211<sup>00</sup></div>
+            <div class="price_unit">PLN/MSC</div>
+          </div>
+
+          <div class="details">
+            <div class="main_details">Zakup towaru + dowóz</div>
+            <div class="additional_details">Serwis</div>
+            <div class="last_details additional_details">Gwarancja 6 lat</div>
+            <div class="additional_details">Porady projektanta</div>
+          </div>
+
+
+          <button>DOŁĄCZ</button>
+        </div>
+
+
+      </section>
+    </div>
+  </div>
+  <div class="container">
     <section class="contact">
 
-        <h2>KONTAKT</h2>
+      <h2>KONTAKT</h2>
 
-        <form>
-            <label>
-                <input type="text" name="name" placeholder="Imię">
-            </label>
-            <label>
-                <input type="email" name="email" placeholder="email">
-            </label>
-            <label>
-                <textarea name="message" placeholder="Wiadomość"></textarea>
-            </label>
-        </form>
-
-        <div class="red_chair">
-            <img src="src/images/red_chair.png">
-        </div>
-        <label class="checkbox">
-            <img src="src/images/form_ok.jpg"> Zgadzam się na przetwarzanie danych osobowych
+      <form>
+        <label>
+          <input type="text" name="name" placeholder="Imię">
         </label>
-        <div class="send">
-            <button class="green_button">WYŚLIJ</button>
-        </div>
+        <label>
+          <input type="email" name="email" placeholder="email">
+        </label>
+        <label>
+          <textarea name="message" placeholder="Wiadomość"></textarea>
+        </label>
+      </form>
+
+      <div class="red_chair">
+        <img src="src/images/red_chair.png">
+      </div>
+      <label class="checkbox">
+        <img src="src/images/form_ok.jpg"> Zgadzam się na przetwarzanie danych osobowych
+      </label>
+      <div class="send">
+        <button class="green_button">WYŚLIJ</button>
+      </div>
     </section>
-</div>
-<section class="application ">
+  </div>
+  <section class="application ">
     <div class="container">
-        <div class="main_width">
-            <section class="choice_part inline">
-                <header>
-                    <h3>SKOMPONUJ SWOJE KRZESŁO</h3>
-                    <span class="green_bell"></span>
-                </header>
+      <div class="main_width">
+        <section class="choice_part inline">
+          <header>
+            <h3>SKOMPONUJ SWOJE KRZESŁO</h3>
+            <span class="green_bell"></span>
+          </header>
 
-                <div class="form">
-                    <div class="drop_down_list">
-                        <span class="list_label">Wybierz rodzaj</span>
-                        <span class="list_arrow"></span>
-                        <ul class="list_panel">
-                            <li>Clair</li>
-                            <li>Margarita</li>
-                            <li>Selena</li>
-                        </ul>
-                    </div>
-                    <div class="drop_down_list">
-                        <span class="list_label">Wybierz kolor</span>
-                        <span class="list_arrow"></span>
-                        <ul class="list_panel">
-                            <li>Czerwony</li>
-                            <li>Czarny</li>
-                            <li>Pomarańczowy</li>
-                        </ul>
-                    </div>
-                    <div class="drop_down_list">
-                        <span class="list_label">Wybierz materiał</span>
-                        <span class="list_arrow"></span>
-                        <ul class="list_panel">
-                            <li>Tkanina</li>
-                            <li>Skóra</li>
-                        </ul>
-                    </div>
-                    <div class="checkbox check-box">
-                        <input type="checkbox" id="transport" data-transport-price="200">
-                        <label for="transport">Transport</label>
-                    </div>
-                    <!--<div class="checkbox"></div>-->
-                    <!--<span class="list_label inline_text">Transport</span>-->
-                </div>
-            </section>
+          <div class="form">
+            <div class="drop_down_list">
+              <span class="list_label">Wybierz rodzaj</span>
+              <span class="list_arrow"></span>
+              <ul class="list_panel">
+                <li>Clair</li>
+                <li>Margarita</li>
+                <li>Selena</li>
+              </ul>
+            </div>
+            <div class="drop_down_list">
+              <span class="list_label">Wybierz kolor</span>
+              <span class="list_arrow"></span>
+              <ul class="list_panel">
+                <li>Czerwony</li>
+                <li>Czarny</li>
+                <li>Pomarańczowy</li>
+              </ul>
+            </div>
+            <div class="drop_down_list">
+              <span class="list_label">Wybierz materiał</span>
+              <span class="list_arrow"></span>
+              <ul class="list_panel">
+                <li>Tkanina</li>
+                <li>Skóra</li>
+              </ul>
+            </div>
+            <div class="checkbox check-box">
+              <input type="checkbox" id="transport" data-transport-price="200">
+              <label for="transport">Transport</label>
+            </div>
+            <!--<div class="checkbox"></div>-->
+            <!--<span class="list_label inline_text">Transport</span>-->
+          </div>
+        </section>
 
-            <section class="image_part inline">
-                <img src="src/images/red_chair.png">
-            </section>
+        <section class="image_part inline">
+          <img src="src/images/red_chair.png">
+        </section>
 
-            <section class="summary_part inline">
-                <header class="align_right">
-                    <h3>PODSUMOWANIE</h3>
-                    <span class="green_bell"></span>
-                </header>
+        <section class="summary_part inline">
+          <header class="align_right">
+            <h3>PODSUMOWANIE</h3>
+            <span class="green_bell"></span>
+          </header>
 
-                <div class="summary_panel">
-                    <div class="panel_left">
-                        <h4 class="title">Twój fotel</h4>
-                        <span class="color"></span>
-                        <span class="pattern"></span>
-                        <span class="transport"></span>
-                    </div>
-                    <div class="panel_right">
-                        <h4 class="title value"></h4>
-                        <span class="color value"></span>
-                        <span class="pattern value"></span>
-                        <span class="transport value"></span>
-                    </div>
-                    <div class="sum_label">SUMA</div>
-                    <div class="sum"><strong></strong></div>
-                </div>
-                <a href="" class="green_button">Zamawiam</a>
-            </section>
-        </div>
+          <div class="summary_panel">
+            <div class="panel_left">
+              <h4 class="title">Twój fotel</h4>
+              <span class="color"></span>
+              <span class="pattern"></span>
+              <span class="transport"></span>
+            </div>
+            <div class="panel_right">
+              <h4 class="title value"></h4>
+              <span class="color value"></span>
+              <span class="pattern value"></span>
+              <span class="transport value"></span>
+            </div>
+            <div class="sum_label">SUMA</div>
+            <div class="sum"><strong></strong></div>
+          </div>
+          <a href="" class="green_button">Zamawiam</a>
+        </section>
+      </div>
     </div>
-</section>
-<footer>
+  </section>
+  <footer>
     <div class="container">
-        <div class="copy">
-            Copyright 2014 &#124; All Rights Reserved - Sit On Chair
-        </div>
-        <div class="logo_footer">
-            SIT <strong>ON</strong> CHAIR
-        </div>
-        <div class="images_footer">
-            <img src="src/images/flickr.png">
-            <img src="src/images/vimeo.png">
-            <img src="src/images/pinterest.png">
-            <img src="src/images/twitter.png">
-        </div>
+      <div class="copy">
+        Copyright 2014 &#124; All Rights Reserved - Sit On Chair
+      </div>
+      <div class="logo_footer">
+        SIT <strong>ON</strong> CHAIR
+      </div>
+      <div class="images_footer">
+        <img src="src/images/flickr.png">
+        <img src="src/images/vimeo.png">
+        <img src="src/images/pinterest.png">
+        <img src="src/images/twitter.png">
+      </div>
     </div>
-</footer>
+  </footer>
 
-<script src="src/js/app.js"></script>
+  <script src="src/js/app.js"></script>
 </body>
+
 </html>

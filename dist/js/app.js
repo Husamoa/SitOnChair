@@ -1,24 +1,21 @@
-document.addEventListener("DOMContentLoaded", function() {
+"use strict";
 
+document.addEventListener("DOMContentLoaded", function () {
   function dropDownMenu() {
     var dropDownMenu = document.getElementById('myDropdown');
     var dropbtn = document.getElementById('dropbtn');
-
-    dropbtn.addEventListener("mouseover", function() {
+    dropbtn.addEventListener("mouseover", function () {
       dropDownMenu.classList.toggle('show');
     });
-
-    dropbtn.addEventListener("mouseleave", function() {
+    dropbtn.addEventListener("mouseleave", function () {
       dropDownMenu.classList.remove('show');
     });
-
-    dropDownMenu.addEventListener("mouseover", function() {
+    dropDownMenu.addEventListener("mouseover", function () {
       dropDownMenu.classList.add('show');
     });
-
-    dropDownMenu.addEventListener("mouseleave", function() {
+    dropDownMenu.addEventListener("mouseleave", function () {
       dropDownMenu.classList.remove('show');
-    })
+    });
   }
 
   dropDownMenu();
@@ -26,52 +23,46 @@ document.addEventListener("DOMContentLoaded", function() {
   function slider() {
     var prevPicture = document.getElementById('prevPicture');
     var nextPicture = document.getElementById('nextPicture');
-
     var listImg = document.querySelectorAll('.slider div');
     console.log(listImg);
-
     var count = 0;
-
     listImg[count].classList.add('visible');
-
-    nextPicture.addEventListener('click', function() {
+    nextPicture.addEventListener('click', function () {
       console.log('nextPicture');
       listImg[count].classList.remove('visible');
+
       if (count >= listImg.length - 1) {
         count = 0;
       } else {
         count++;
       }
+
       listImg[count].classList.add('visible');
-
     });
-
-    prevPicture.addEventListener('click', function() {
+    prevPicture.addEventListener('click', function () {
       console.log('prevPicture');
       listImg[count].classList.remove('visible');
+
       if (count === 0) {
         count = listImg.length - 1;
       } else {
         count--;
-
       }
-      listImg[count].classList.add('visible');
-    })
 
+      listImg[count].classList.add('visible');
+    });
   }
 
   slider();
-
 
   function dropDown() {
     var listArrow = document.getElementsByClassName('list_arrow');
 
     for (var i = 0; i < listArrow.length; i++) {
-      listArrow[i].addEventListener('click', function() {
+      listArrow[i].addEventListener('click', function () {
         this.nextElementSibling.classList.toggle('show');
-      })
+      });
     }
-
   }
 
   dropDown();
@@ -81,19 +72,15 @@ document.addEventListener("DOMContentLoaded", function() {
     var listLabel = document.getElementsByClassName('list_label');
     var transportCheck = document.getElementById('transport');
     var value = document.querySelectorAll('.panel_right .value');
-
     var title = document.querySelector('.title');
     var color = document.querySelector('.color');
     var pattern = document.querySelector('.pattern');
     var transport = document.querySelector('.transport');
-
     var sumText = document.querySelector('.sum strong');
-
     var sum = 0;
 
-
     for (var i = 0; i < listPanel.length; i++) {
-      listPanel[i].addEventListener('click', function() {
+      listPanel[i].addEventListener('click', function () {
         this.parentElement.previousElementSibling.previousElementSibling.innerText = this.innerText;
         this.parentElement.previousElementSibling.previousElementSibling.style.color = 'black';
         title.innerText = "Chair " + listLabel[0].innerText;
@@ -104,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function() {
           sumText.innerText = sum;
         } else if (listLabel[0].innerText === 'Margarita') {
           value[0].innerText = 300;
-          sum = 300
+          sum = 300;
           sumText.innerText = sum;
         } else if (listLabel[0].innerText === 'Selena') {
           value[0].innerText = 400;
@@ -115,6 +102,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         color.innerText = listLabel[1].innerText;
+
         if (listLabel[1].innerText === 'Czerwony') {
           value[1].innerText = 40;
           sum += 40;
@@ -132,6 +120,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         pattern.innerText = listLabel[2].innerText;
+
         if (listLabel[2].innerText === 'Tkanina') {
           value[2].innerText = 100;
           sum += 100;
@@ -144,20 +133,17 @@ document.addEventListener("DOMContentLoaded", function() {
           value[2].innerText = '';
         }
 
-
         this.parentElement.classList.toggle('show');
       });
-
-      listPanel[i].addEventListener('mousemove', function() {
+      listPanel[i].addEventListener('mousemove', function () {
         this.style.backgroundColor = 'lightblue';
       });
-
-      listPanel[i].addEventListener('mouseleave', function() {
+      listPanel[i].addEventListener('mouseleave', function () {
         this.style.backgroundColor = '';
       });
     }
 
-    transportCheck.addEventListener("change", function() {
+    transportCheck.addEventListener("change", function () {
       if (this.checked) {
         transport.innerText = 'Transport';
         value[3].innerText = 200;
@@ -170,34 +156,27 @@ document.addEventListener("DOMContentLoaded", function() {
         sumText.innerText = sum;
       }
     });
-
-
   }
 
   choose();
-
   /* Hamburger menu animation  */
 
-  const menu = document.querySelector('.hamburger');
-
-  menu.addEventListener('click', () => {
+  var menu = document.querySelector('.hamburger');
+  menu.addEventListener('click', function () {
     menu.classList.toggle('hamburger--active');
   });
-
   /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
 
+  var clickHamburgerMenu = function clickHamburgerMenu() {
+    var links = document.getElementById('nav-links');
 
-
-  const clickHamburgerMenu = () => {
-    const links = document.getElementById('nav-links')
     if (links.style.display === "block") {
       links.style.display = "none";
     } else {
       links.style.display = "block";
     }
-  }
+  };
 
-  const hamburger = document.getElementById("hamburger");
+  var hamburger = document.getElementById("hamburger");
   hamburger.addEventListener('click', clickHamburgerMenu);
-
 });

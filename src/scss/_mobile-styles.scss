@@ -1,0 +1,49 @@
+@media only screen and (min-width: 769px) {
+  .boxes {
+    .box {
+      box-shadow: 0 0 30px 0 rgba(0,0,0,0.5);
+    }
+
+    .all_inputs {
+      box-shadow: 0 0 30px 0 rgba(0,0,0,0.5);
+    }
+  }
+}
+@media only screen and (min-width: 577px) {
+  .hamburger {
+    display: none;
+  }
+}
+@media only screen and (max-width: 576px) {
+  header.header {
+    display: block;
+    .logo {
+      position: absolute;
+      left: 40px;
+      top: 30px;
+    }
+  }
+
+  .topnav {
+    overflow: hidden;
+    background-color: #000;
+    padding-top: 10vh;
+
+    #nav-links {
+      display: none;
+      background-color: #333;
+
+      a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+        &:hover {
+          background-color: #ddd;
+          color: black;
+        }
+      }
+    }
+  }
+}
