@@ -141,13 +141,13 @@ main {
   .nav {
     font-size: 70px;
     color: #24ba9f;
+    text-align: center;
   }
-}
-
-.main-section {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  .main-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
 
 @mixin backgroundImg {
@@ -214,7 +214,7 @@ main {
   font-size: 20px;
   color: white;
   padding: 15px 0 12px 25px;
-  width: 263px;
+  max-width: 263px;
   margin-top: 25px;
   letter-spacing: 3px;
 }

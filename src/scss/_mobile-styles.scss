@@ -46,4 +46,21 @@
       }
     }
   }
+  main {
+    padding-bottom: 10%;
+    margin-bottom: 10%;
+    .nav {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header{
+    nav{
+      .nav-links {
+        min-width: 40vw;
+      }
+    }
+  }
 }
