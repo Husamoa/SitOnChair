@@ -41,12 +41,8 @@ main {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#cbcacf', GradientType=0); /* IE6-9 */;
 }
 
-.contact {
-  height: 540px;
-}
-
 footer {
-  height: 100px;
+  min-height: 100px;
 }
 
 /* Header */
@@ -491,26 +487,16 @@ main {
   margin-top: 5px;
 }
 
-.contact form {
-  float: left;
-}
 
 .contact form label input, textarea {
   font-family: 'ralewaylight', Arial, Tahoma, sans-serif;
   display: block;
   font-size: 30px;
   border: 1px solid #27c7ab;
-  position: relative;
-  left: 75px;
-  top: 15px;
   margin-top: 10px;
   margin-bottom: 20px;
   padding: 15px 10px 15px 10px;
   max-width: 610px;
-}
-
-.contact .red_chair {
-  float: right;
 }
 
 .contact form label input::placeholder {
@@ -526,25 +512,15 @@ textarea[placeholder="Wiadomość"] {
   resize: none;
 }
 
-.red_chair {
-  position: relative;
-  right: 150px;
-}
 
 .checkbox {
   font-family: 'ralewaylight', Arial, Tahoma, sans-serif;
-  box-sizing: border-box;
-  float: right;
-  display: block;
   width: 435px;
   font-size: 20px;
-  margin-top: 30px;
-  padding-right: 30px;
   color: #999999;
 }
 
 .checkbox img {
-  float: left;
   border: 1px solid #27c7ab;
   height: 45px;
   width: 45px;
@@ -552,14 +528,9 @@ textarea[placeholder="Wiadomość"] {
 }
 
 .send button {
-  float: right;
-  position: relative;
-  top: 15px;
-  right: 95px;
   width: 340px;
   margin-top: 20px;
   height: 70px;
-  border-radius: 10px;
   font-size: 35px;
   color: white;
   background-color: #27c7ab;
@@ -607,11 +578,6 @@ textarea[placeholder="Wiadomość"] {
   font-family: 'ralewaylight', Arial, Tahoma, sans-serif;
 }
 
-
-.checkbox {
-  position: relative;
-  padding: 30px 30px 30px 140px;
-}
 .checkbox input {
   display: block;
   opacity: 0;
@@ -667,11 +633,6 @@ textarea[placeholder="Wiadomość"] {
   margin-left: 15px;
   color: #aeaeae;
 }
-.image_part img{
-  margin-top: 110px;
-  margin-left: 38px;
-}
-
 
 .application .green_bell {
   background-color: #24baa0;

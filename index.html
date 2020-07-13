@@ -168,12 +168,12 @@
 
   <section class="application ">
     <div class="container">
-      <div class="main_width">
+      <div class="container__row">
         <section class="choice_part inline">
-          <header>
+          <div>
             <h3>SKOMPONUJ SWOJE KRZESŁO</h3>
             <span class="green_bell"></span>
-          </header>
+          </div>
 
           <div class="form">
             <div class="drop_down_list">
@@ -239,37 +239,44 @@
           </div>
           <a href="" class="green_button">Zamawiam</a>
         </section>
-      </div>
     </div>
+  </div>
   </section>
 
   <div class="container">
-    <section id="contact" class="contact">
+      <section id="contact" class="contact">
 
-      <h2>KONTAKT</h2>
+        <h2>KONTAKT</h2>
+        <div class="container__row">
+        <div class="container__col-4">
+          <form>
+            <label>
+              <input type="text" name="name" placeholder="Imię">
+            </label>
+            <label>
+              <input type="email" name="email" placeholder="email">
+            </label>
+            <label>
+              <textarea name="message" placeholder="Wiadomość"></textarea>
+            </label>
+          </form>
+        </div>
 
-      <form>
-        <label>
-          <input type="text" name="name" placeholder="Imię">
-        </label>
-        <label>
-          <input type="email" name="email" placeholder="email">
-        </label>
-        <label>
-          <textarea name="message" placeholder="Wiadomość"></textarea>
-        </label>
-      </form>
-
-      <div class="red_chair">
-        <img src="src/images/red_chair.png">
-      </div>
-      <label class="checkbox">
-        <img src="src/images/form_ok.jpg"> Zgadzam się na przetwarzanie danych osobowych
-      </label>
-      <div class="send">
-        <button class="green_button">WYŚLIJ</button>
-      </div>
-    </section>
+        <div class="container__col-4">
+          <div class="red_chair">
+            <img src="src/images/red_chair.png">
+          </div>
+        </div>
+        <div class="container__col-4">
+          <label class="checkbox">
+            <img src="src/images/form_ok.jpg"> Zgadzam się na przetwarzanie danych osobowych
+          </label>
+          <div class="send">
+            <button class="green_button">WYŚLIJ</button>
+          </div>
+        </div>
+    </div>
+  </section>
   </div>
 
   <footer>
