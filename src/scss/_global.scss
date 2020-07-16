@@ -28,7 +28,7 @@ header.header {
 
 .background-pricelist {
   background: rgb(241, 241, 241);
-
+  width: 100vw;
 }
 
 main {
@@ -515,7 +515,7 @@ textarea[placeholder="Wiadomość"] {
 
 .checkbox {
   font-family: 'ralewaylight', Arial, Tahoma, sans-serif;
-  width: 435px;
+  max-width: 235px;
   font-size: 20px;
   color: #999999;
 }
@@ -528,7 +528,7 @@ textarea[placeholder="Wiadomość"] {
 }
 
 .send button {
-  width: 340px;
+  max-width: 340px;
   margin-top: 20px;
   height: 70px;
   font-size: 35px;
@@ -540,6 +540,7 @@ textarea[placeholder="Wiadomość"] {
 
 .application {
   background-color: #f9f9f9;
+  padding: 20px 0 65px 0;
 }
 .application h3 {
   color: #575757;
@@ -550,12 +551,12 @@ textarea[placeholder="Wiadomość"] {
   text-align: right;
 }
 
+.image_part {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-.inline {
-  display:inline-block;
-  width:300px;
-  padding:14px;
-  vertical-align: top;
 }
 
 
@@ -763,25 +764,24 @@ textarea[placeholder="Wiadomość"] {
 // Footer
 
 footer .copy {
-  float: left;
-  padding-top: 35px;
-  padding-left: 65px;
   letter-spacing: 1px;
   color: #999999;
 }
 
 footer .logo_footer {
-  float: right;
-  padding-top: 30px;
-  margin-right: 75px;
   color: #999999;
 
 }
 
 footer .images_footer {
-  float: right;
-  padding-top: 20px;
-  margin-right: 67px;
+
+}
+
+footer {
+  .container__row {
+    justify-content: space-evenly;
+    align-items: center;
+  }
 }
 
 .logo_footer {
